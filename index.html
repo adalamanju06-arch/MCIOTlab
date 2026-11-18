@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCIOT Lab Portal | GRIET (GR24A3095)</title>
+  <meta name="description" content="Micro Controller and Internet of Things Lab portal with complete lab manual, interactive simulations (Wokwi, Tinkercad, Kodular), circuits, and code.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/griet_logo.png">
+</head>
+<body>
+
+  <!-- Top Academic Banner -->
+  <div class="top-notice">
+    <span>🏛️ <strong>Gokaraju Rangaraju Institute of Engineering and Technology</strong> (Autonomous) — Dept. of Computer Science & Engineering</span>
+    <span>•</span>
+    <span>GR24 Regulations | III B.Tech I Semester</span>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <img src="images/griet_logo.png" alt="GRIET Emblem" class="nav-logo" onerror="this.style.display='none'">
+        <div class="nav-title-group">
+          <h1>Micro Controller & IoT Lab</h1>
+          <p>Course Code: GR24A3095 • CSE Dept</p>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#quickLaunchSection" class="nav-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span>Simulation Links</span>
+        </a>
+        <a href="#experimentsSection" class="nav-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span>Lab Tasks</span>
+        </a>
+        <a href="#manualViewer" class="nav-btn secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>PDF Manual</span>
+        </a>
+        <a href="lab_manual.pdf" download="MCIOT_Lab_Manual_GR24A3095.pdf" class="nav-btn primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Download PDF</span>
+        </a>
+        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-badge-container">
+      <span class="pill-badge red">GR24 Regulations</span>
+      <span class="pill-badge blue">III B.Tech I Semester</span>
+      <span class="pill-badge green">L:0 T:0 P:4 C:2</span>
+    </div>
+
+    <h2>
+      <span class="hero-gradient-text">Micro Controller & Internet of Things</span> Lab
+    </h2>
+    <p>
+      Complete online lab manual, tested Arduino C++ programs, hardware pinouts, circuit diagrams, and one-click direct simulation links for Wokwi, Tinkercad, and Kodular.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#quickLaunchSection" class="exp-btn-launch btn-wokwi">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span>Open Simulation Links</span>
+      </a>
+      <a href="#manualViewer" class="exp-btn-launch" style="background: var(--primary);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>Read PDF Lab Manual</span>
+      </a>
+      <a href="lab_manual.pdf" target="_blank" class="exp-btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        <span>Open PDF in New Tab</span>
+      </a>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number">15</span>
+        <span class="stat-label">Lab Experiments</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Wokwi Simulations</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Kodular Mobile Apps</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">87</span>
+        <span class="stat-label">Manual PDF Pages</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Launch Simulation Grid Section -->
+  <section class="quick-launcher-section" id="quickLaunchSection">
+    <div class="section-header">
+      <div class="section-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <h3>Quick Simulation & Project Launcher</h3>
+        <span>— Direct external links to run simulations in one click</span>
+      </div>
+    </div>
+
+    <!-- Rendered via JavaScript -->
+    <div class="launcher-grid" id="quickLaunchGrid"></div>
+  </section>
+
+  <!-- Search & Category Filters -->
+  <section class="main-controls-section" id="experimentsSection">
+    <div class="controls-wrapper">
+      <div class="search-and-views">
+        <div class="search-box-container">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="taskSearchInput" class="search-input" placeholder="Search tasks, sensors (e.g. LDR, Ultrasonic, MPU6050, Firebase, Kodular)... (Press '/' or Ctrl+K)" />
+        </div>
+
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all" onclick="setCategory('all', this)">All Tasks (15)</button>
+          <button class="filter-btn" data-filter="arduino" onclick="setCategory('arduino', this)">Arduino Uno</button>
+          <button class="filter-btn" data-filter="esp32" onclick="setCategory('esp32', this)">ESP32 & IoT</button>
+          <button class="filter-btn" data-filter="mobile" onclick="setCategory('mobile', this)">Kodular Mobile App</button>
+          <button class="filter-btn" data-filter="wokwi" onclick="setCategory('wokwi', this)">Wokwi</button>
+          <button class="filter-btn" data-filter="tinkercad" onclick="setCategory('tinkercad', this)">Tinkercad</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Experiments Container -->
+  <main class="experiments-container" id="experimentsList">
+    <!-- Injected dynamically by app.js -->
+  </main>
+
+  <!-- Embedded PDF Manual Section -->
+  <section class="manual-section" id="manualViewer">
+    <div class="manual-wrapper">
+      <div class="manual-toolbar">
+        <div class="manual-toolbar-left">
+          <div class="manual-toolbar-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>Official Lab Manual (87 Pages)</span>
+          </div>
+
+          <div class="manual-quick-jumps">
+            <label for="pdfPageSelect" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Jump To:</label>
+            <select id="pdfPageSelect" class="manual-select" onchange="jumpToPage(this.value)">
+              <option value="1">Page 1: Title & Cover</option>
+              <option value="2">Page 2: Syllabus & Course Outcomes</option>
+              <option value="4">Page 4: Index Table</option>
+              <option value="6">Page 6: Introduction to Arduino Uno</option>
+              <option value="9">Page 9: ATmega328 Pin Mapping</option>
+              <option value="15">Task 1: LDR Street Light (Page 15)</option>
+              <option value="18">Task 2: Ultrasonic Distance (Page 18)</option>
+              <option value="20">Task 3: Soil Moisture Sensor (Page 20)</option>
+              <option value="23">Task 4: DC Motor & L293D (Page 23)</option>
+              <option value="26">Task 5: LCD Curtain Display (Page 26)</option>
+              <option value="30">Task 6: Sound Sensor / Tone (Page 30)</option>
+              <option value="32">Task 7: Kodular Mobile App Setup (Page 32)</option>
+              <option value="40">Firebase Cloud Setup Guide (Page 40)</option>
+              <option value="54">Task 7a: Location Sensor App (Page 54)</option>
+              <option value="55">Task 7b: Text to Speech App (Page 55)</option>
+              <option value="56">GISMO VI Schematic Diagram (Page 56)</option>
+              <option value="57">Task 8: MPU 6050 & Reed Switch (Page 57)</option>
+              <option value="60">Task 9: Remote Range Indicator (Page 60)</option>
+              <option value="64">Task 10: Internet Enabled IR Sensor (Page 64)</option>
+              <option value="68">Task 11: Smart Garden Maintenance (Page 68)</option>
+              <option value="73">Task 12: BMP 280 & OLED Display (Page 73)</option>
+              <option value="77">Task 13: Home Safety Security (Page 77)</option>
+              <option value="80">Task 14: APDS-9960 Gesture Sensor (Page 80)</option>
+              <option value="84">Task 15: PIR Motion Sensor (Page 84)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="manual-toolbar-right">
+          <button class="exp-btn-secondary" onclick="togglePdfFullscreen()" title="Full screen">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            <span>Fullscreen</span>
+          </button>
+          <a href="lab_manual.pdf" target="_blank" class="exp-btn-secondary" title="Open in separate tab">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <span>Open in Tab</span>
+          </a>
+          <a href="lab_manual.pdf" download="MCIOT_Lab_Manual_GR24A3095.pdf" class="exp-btn-launch" style="background: var(--primary);" title="Download PDF file">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download PDF</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="manual-frame-container" id="manualFrameContainer">
+        <iframe id="pdfIframe" src="lab_manual.pdf#page=1" class="manual-iframe" title="GRIET MCIOT Lab Manual PDF">
+          <p>
+            Your browser does not support inline PDF viewing. 
+            <a href="lab_manual.pdf" target="_blank">Click here to download and view the manual</a>.
+          </p>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware Reference & Overview -->
+  <section class="reference-section">
+    <div class="reference-grid">
+      <div class="ref-card">
+        <h4>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="8" cy="8" r="1.5"/><circle cx="16" cy="8" r="1.5"/><circle cx="8" cy="16" r="1.5"/><circle cx="16" cy="16" r="1.5"/></svg>
+          Arduino UNO Microcontroller
+        </h4>
+        <p><strong>ATmega328P</strong> @ 16 MHz, 5V Operating Voltage, 14 Digital I/O Pins (6 PWM outputs), 6 Analog Inputs (10-bit resolution 0-1023), 32 KB Flash memory.</p>
+        <button class="exp-btn-secondary" onclick="openLightbox('images/page_6.png', 'Arduino Uno Architecture & Pinout')">
+          <span>View Arduino Uno Pinout Diagram</span>
+        </button>
+      </div>
+
+      <div class="ref-card">
+        <h4>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10h10M7 14h6"/></svg>
+          ESP32 GISMO-VI IoT Development Board
+        </h4>
+        <p>Equipped with dual-core Xtensa 32-bit MCU, integrated 2.4 GHz Wi-Fi and Bluetooth, dedicated headers for APDS-9960, BMP280, MPU6050, OLED, Ultrasonic, Relay, and Reed Switch.</p>
+        <button class="exp-btn-secondary" onclick="openLightbox('images/page_56.png', 'GISMO VI Complete Schematic')">
+          <span>View GISMO VI Schematic Diagram</span>
+        </button>
+      </div>
+
+      <div class="ref-card">
+        <h4>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          Google Firebase Realtime Database
+        </h4>
+        <p>Used for real-time cloud data logging across Tasks 7c, 8, 9, 10, 11, 12, 14, and 15. Provides synchronized JSON nodes accessible by both ESP32 firmware and Kodular Android apps.</p>
+        <a href="#manualViewer" onclick="jumpToPage(40)" class="exp-btn-secondary">
+          <span>View Firebase Cloud Setup Steps</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Lightbox for Fullscreen Image/Circuit Inspection -->
+  <div class="modal-overlay" id="imgModal" onclick="closeLightbox()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalTitle">Circuit Diagram</h4>
+        <button class="modal-close-btn" onclick="closeLightbox()" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImg" src="" alt="Circuit Diagram Preview" class="modal-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h4>Gokaraju Rangaraju Institute of Engineering and Technology (GRIET)</h4>
+        <p>Department of Computer Science and Engineering • GR24 Regulations (GR24A3095)</p>
+        <p style="font-size: 0.78rem; color: var(--text-light); margin-top: 6px;">Bachupally, Kukatpally, Hyderabad, Telangana 500090</p>
+      </div>
+      <div class="footer-right">
+        <a href="#quickLaunchSection" class="exp-btn-secondary">Simulation Links</a>
+        <a href="#manualViewer" class="exp-btn-secondary">Lab Manual PDF</a>
+        <a href="lab_manual.pdf" download class="exp-btn-launch" style="background: var(--primary);">Download PDF</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
